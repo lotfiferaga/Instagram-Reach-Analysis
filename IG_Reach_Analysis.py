@@ -115,3 +115,8 @@ y = np.array(data["Impressions"])
 xtrain, xtest, ytrain, ytest = train_test_split(x, y, 
                                                 test_size=0.2, 
                                                 random_state=42)
+
+## model 
+model = PassiveAggressiveRegressor()
+model.fit(xtrain, ytrain)
+model.score(xtest, ytest)
