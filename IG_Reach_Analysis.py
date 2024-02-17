@@ -106,3 +106,12 @@ figure = px.scatter(data_frame = data, x="Profile Visits",
                     y="Follows", size="Follows", trendline="ols", 
                     title = "Relationship Between Profile Visits and Followers Gained")
 figure.show()
+
+
+###
+x = np.array(data[['Likes', 'Saves', 'Comments', 'Shares', 
+                   'Profile Visits', 'Follows']])
+y = np.array(data["Impressions"])
+xtrain, xtest, ytrain, ytest = train_test_split(x, y, 
+                                                test_size=0.2, 
+                                                random_state=42)
