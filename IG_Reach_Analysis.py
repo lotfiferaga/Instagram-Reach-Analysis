@@ -77,3 +77,8 @@ figure = px.scatter(data_frame = data, x="Impressions",
                     y="Comments", size="Comments", trendline="ols", 
                     title = "Relationship Between Comments and Total Impressions")
 figure.show()
+
+figure = px.scatter(data_frame = data, x="Impressions",
+                    y="Shares", size="Shares", trendline="ols", 
+                    title = "Relationship Between Shares and Total Impressions")
+figure.show()
