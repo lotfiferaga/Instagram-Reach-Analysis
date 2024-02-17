@@ -66,3 +66,9 @@ plt.figure( figsize=(12,10))
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 plt.show()
+
+# analyzing relationships 
+figure = px.scatter(data_frame = data, x="Impressions",
+                    y="Likes", size="Likes", trendline="ols", 
+                    title = "Relationship Between Likes and Impressions")
+figure.show()
