@@ -24,3 +24,10 @@ plt.style.use('fivethirtyeight')
 plt.title("Distribution of Impressions From Home")
 sns.distplot(data['From Home'])
 plt.show()
+
+
+plt.figure(figsize=(10, 8))
+plt.title("Distribution of Impressions From Hashtags")
+sns.distplot(data['From Hashtags'])
+plt.show()
+
