@@ -100,3 +100,9 @@ print(correlation["Impressions"].sort_values(ascending=False))
 ###
 conversion_rate = (data["Follows"].sum() / data["Profile Visits"].sum()) * 100
 print(conversion_rate)
+
+#### 
+figure = px.scatter(data_frame = data, x="Profile Visits",
+                    y="Follows", size="Follows", trendline="ols", 
+                    title = "Relationship Between Profile Visits and Followers Gained")
+figure.show()
