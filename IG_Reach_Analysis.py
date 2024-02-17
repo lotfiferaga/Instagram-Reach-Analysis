@@ -17,3 +17,10 @@ data = data.dropna()
 
 
 data.info()
+
+
+plt.figure(figsize=(10, 8))
+plt.style.use('fivethirtyeight')
+plt.title("Distribution of Impressions From Home")
+sns.distplot(data['From Home'])
+plt.show()
