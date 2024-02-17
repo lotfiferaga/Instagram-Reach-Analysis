@@ -49,3 +49,12 @@ values = [home, hashtags, explore, other]
 fig = px.pie(data, values=values, names=labels, 
              title='Impressions on Instagram Posts From Various Sources', hole=0.5)
 fig.show()
+
+text = " ".join(i for i in data.Caption)
+stopwords = set(STOPWORDS)
+wordcloud = WordCloud(stopwords=stopwords, background_color="white").generate(text)
+plt.style.use('classic')
+plt.figure( figsize=(12,10))
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis("off")
+plt.show()
