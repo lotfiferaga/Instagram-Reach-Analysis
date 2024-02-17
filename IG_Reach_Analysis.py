@@ -18,20 +18,34 @@ data = data.dropna()
 
 data.info()
 
-
+# from home
 plt.figure(figsize=(10, 8))
 plt.style.use('fivethirtyeight')
 plt.title("Distribution of Impressions From Home")
 sns.distplot(data['From Home'])
 plt.show()
 
-
+# from hashtags
 plt.figure(figsize=(10, 8))
 plt.title("Distribution of Impressions From Hashtags")
 sns.distplot(data['From Hashtags'])
 plt.show()
 
+# from explore
 plt.figure(figsize=(10, 8))
 plt.title("Distribution of Impressions From Explore")
 sns.distplot(data['From Explore'])
 plt.show()
+
+
+home = data["From Home"].sum()
+hashtags = data["From Hashtags"].sum()
+explore = data["From Explore"].sum()
+other = data["From Other"].sum()
+
+labels = ['From Home','From Hashtags','From Explore','Other']
+values = [home, hashtags, explore, other]
+
+fig = px.pie(data, values=values, names=labels, 
+             title='Impressions on Instagram Posts From Various Sources', hole=0.5)
+fig.show()
