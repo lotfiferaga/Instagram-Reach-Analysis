@@ -13,3 +13,4 @@ print(data.head())
 data.isnull().sum()
 
 
+data = data.dropna()
