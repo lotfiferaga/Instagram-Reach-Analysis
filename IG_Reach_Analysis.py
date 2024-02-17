@@ -49,7 +49,7 @@ values = [home, hashtags, explore, other]
 fig = px.pie(data, values=values, names=labels, 
              title='Impressions on Instagram Posts From Various Sources', hole=0.5)
 fig.show()
-
+###
 text = " ".join(i for i in data.Caption)
 stopwords = set(STOPWORDS)
 wordcloud = WordCloud(stopwords=stopwords, background_color="white").generate(text)
@@ -58,6 +58,7 @@ plt.figure( figsize=(12,10))
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 plt.show()
+####
 
 text = " ".join(i for i in data.Hashtags)
 stopwords = set(STOPWORDS)
@@ -73,12 +74,20 @@ figure = px.scatter(data_frame = data, x="Impressions",
                     title = "Relationship Between Likes and Impressions")
 figure.show()
 
+#####
 figure = px.scatter(data_frame = data, x="Impressions",
                     y="Comments", size="Comments", trendline="ols", 
                     title = "Relationship Between Comments and Total Impressions")
 figure.show()
 
+###
 figure = px.scatter(data_frame = data, x="Impressions",
                     y="Shares", size="Shares", trendline="ols", 
                     title = "Relationship Between Shares and Total Impressions")
+figure.show()
+
+###
+figure = px.scatter(data_frame = data, x="Impressions",
+                    y="Saves", size="Saves", trendline="ols", 
+                    title = "Relationship Between Post Saves and Total Impressions")
 figure.show()
