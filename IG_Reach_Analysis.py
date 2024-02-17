@@ -96,3 +96,7 @@ figure.show()
 #### 
 correlation = data.corr()
 print(correlation["Impressions"].sort_values(ascending=False))
+
+###
+conversion_rate = (data["Follows"].sum() / data["Profile Visits"].sum()) * 100
+print(conversion_rate)
