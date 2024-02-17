@@ -120,3 +120,8 @@ xtrain, xtest, ytrain, ytest = train_test_split(x, y,
 model = PassiveAggressiveRegressor()
 model.fit(xtrain, ytrain)
 model.score(xtest, ytest)
+
+##
+# Features = [['Likes','Saves', 'Comments', 'Shares', 'Profile Visits', 'Follows']]
+features = np.array([[282.0, 233.0, 4.0, 9.0, 165.0, 54.0]])
+model.predict(features)
