@@ -14,3 +14,6 @@ data.isnull().sum()
 
 
 data = data.dropna()
+
+
+data.info()
