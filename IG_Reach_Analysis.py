@@ -91,3 +91,8 @@ figure = px.scatter(data_frame = data, x="Impressions",
                     y="Saves", size="Saves", trendline="ols", 
                     title = "Relationship Between Post Saves and Total Impressions")
 figure.show()
+
+
+#### 
+correlation = data.corr()
+print(correlation["Impressions"].sort_values(ascending=False))
