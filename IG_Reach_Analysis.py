@@ -31,3 +31,7 @@ plt.title("Distribution of Impressions From Hashtags")
 sns.distplot(data['From Hashtags'])
 plt.show()
 
+plt.figure(figsize=(10, 8))
+plt.title("Distribution of Impressions From Explore")
+sns.distplot(data['From Explore'])
+plt.show()
