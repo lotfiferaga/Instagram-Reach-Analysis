@@ -10,5 +10,6 @@ from sklearn.linear_model import PassiveAggressiveRegressor
 data = pd.read_csv("Instagram.csv", encoding = 'latin1')
 print(data.head())
 
+data.isnull().sum()
 
 
